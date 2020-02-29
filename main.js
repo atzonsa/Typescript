@@ -123,5 +123,11 @@ var Employee = /** @class */ (function () {
     function Employee(name) {
         this.employeeName = name;
     }
+    Employee.prototype.hello = function () {
+        console.log("Hello, how are you " + this.employeeName + "?");
+    };
     return Employee;
 }());
+var emp = new Employee("Ankit");
+console.log(emp.employeeName);
+emp.hello();

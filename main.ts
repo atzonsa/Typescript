@@ -171,8 +171,15 @@ class Employee {
     constructor(name: string){
         this.employeeName = name;
     }
+
+    hello(){
+        console.log(`Hello, how are you ${this.employeeName}?`);
+    }
 }
 
+let emp = new Employee("Ankit");
+console.log(emp.employeeName);
+emp.hello();
 
 
 
