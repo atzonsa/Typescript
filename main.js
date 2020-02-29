@@ -119,3 +119,9 @@ var aMukesh = {
     country: "India"
 };
 address(aMukesh);
+var Employee = /** @class */ (function () {
+    function Employee(name) {
+        this.employeeName = name;
+    }
+    return Employee;
+}());

@@ -165,7 +165,13 @@ let aMukesh = {
 
 address(aMukesh);
 
+class Employee {
+    employeeName: string;
 
+    constructor(name: string){
+        this.employeeName = name;
+    }
+}
 
 
 
