@@ -166,7 +166,7 @@ let aMukesh = {
 address(aMukesh);
 
 class Employee {
-    employeeName: string;
+    public employeeName: string;
 
     constructor(name: string){
         this.employeeName = name;
@@ -174,16 +174,36 @@ class Employee {
 
     hello(){
         console.log(`Hello, how are you ${this.employeeName}?`);
+        this.bye();
+    }
+
+    protected promotion(){
+        console.log(`You are promoted ${this.employeeName}!!!!`);
+    }
+
+    private bye(){
+        console.log(`Bye ${this.employeeName}?`);
     }
 }
 
 let emp = new Employee("Ankit");
 console.log(emp.employeeName);
 emp.hello();
+//emp.bye();
 
 
+class Manager extends Employee{
+    constructor(managerName: string){
+        super(managerName);
+    }
 
+    public roles(){
+        console.log("Manager roles in company")
+        man.promotion();
+    }
+}
 
-
-
-
+let man = new Manager('Nitin');
+man.roles();
+man.hello();
+console.log(man.employeeName);
